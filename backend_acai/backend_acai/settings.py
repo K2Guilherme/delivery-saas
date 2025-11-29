@@ -41,11 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'corsheaders',
     'core',
 ]
 
 MIDDLEWARE = [
+
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -172,4 +174,4 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # --- CONFIGURAÇÃO DE SEGURANÇA PARA O SITE FUNCIONAR ---
 CORS_ALLOW_ALL_ORIGINS = True  # Deixa o Netlify entrar
-CSRF_TRUSTED_ORIGINS = ['https://*.netlify.app'] # Confia no Netlify
+CSRF_TRUSTED_ORIGINS = ['https://*.netlify.app'] # Confia no Netlifygit add .
