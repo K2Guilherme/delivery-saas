@@ -174,4 +174,11 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # --- CONFIGURAÇÃO DE SEGURANÇA PARA O SITE FUNCIONAR ---
 CORS_ALLOW_ALL_ORIGINS = True  # Deixa o Netlify entrar
-CSRF_TRUSTED_ORIGINS = ['https://*.netlify.app'] # Confia no Netlifygit add .
+CSRF_TRUSTED_ORIGINS = ['https://*.netlify.app'] # Confia no Netlifygit add . 
+
+# --- FORÇAR MODO JSON (CORREÇÃO DE ERRO DE TEMPLATE) ---
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
+}
