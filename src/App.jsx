@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ShoppingCart, Plus, Minus, Trash2, CreditCard, QrCode, CheckCircle, ChevronLeft, Search, Droplet, Star, Package, MapPin, User, Home, Send, Loader, RefreshCw, AlertCircle, Sparkles, Share2, Copy, Lock, Store, Instagram, Info, ArrowRight } from 'lucide-react';
 
 export default function App() {
-  const API_URL = "http://127.0.0.1:8000/api"; 
+  const API_URL =  "https://k2rhym.pythonanywhere.com/api"; 
 
   // --- ESTADOS ---
   const [storeSlug, setStoreSlug] = useState(null); 
