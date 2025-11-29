@@ -169,3 +169,7 @@ DATABASES = {
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# --- CONFIGURAÇÃO DE SEGURANÇA PARA O SITE FUNCIONAR ---
+CORS_ALLOW_ALL_ORIGINS = True  # Deixa o Netlify entrar
+CSRF_TRUSTED_ORIGINS = ['https://*.netlify.app'] # Confia no Netlify
