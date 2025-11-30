@@ -3,6 +3,15 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework.routers import DefaultRouter
+from django.views.generic import TemplateView
+
+urlpatterns = [
+    # Esta linha faz a página inicial mostrar o seu React!
+    path('', TemplateView.as_view(template_name='index.html')),
+    
+    path('admin/', admin.site.urls),
+    # ... resto das rotas ...
+]
 # Importamos as views, incluindo a nova LojaViewSet
 from core.views import CategoriaViewSet, ProdutoViewSet, LojaViewSet, CriarPagamentoPixView, VerificarPagamentoView
 
